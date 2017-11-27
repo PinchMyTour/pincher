@@ -1,50 +1,81 @@
+
 <div class="form-it">
-  <div class="field">
-    <label class="label">Email</label>
-    <div class="control has-icons-left has-icons-right">
-      <input class="input" type="email" placeholder="someone@something.com" value="">
-      <span class="icon is-small is-left">
-        <i class="fa fa-envelope"></i>
-      </span>
-<%#       <span class="icon is-small is-right">
-        <i class="fa fa-warning"></i>
-      </span> %>
-    </div>
-    <%# <p class="help is-danger">This email is invalid</p> %>
-  </div>
 
-  <div class="field">
-    <label class="label">Password</label>
-    <div class="control has-icons-left has-icons-right">
-      <input class="input" type="password" placeholder="secret" value="">
-      <span class="icon is-small is-left">
-        <i class="fa fa-lock"></i>
-      </span>
-<%#       <span class="icon is-small is-right">
-        <i class="fa fa-warning"></i>
-      </span> %>
+<%= if get_flash(@conn, :error) do %>
+  <article class="message is-danger">
+    <div class="message-header">
+      <p>Danger</p>
+      <button class="delete" aria-label="delete"></button>
     </div>
-    <%# <p class="help is-danger">This email is invalid</p> %>
-  </div>
+    <div class="message-body">
+      <%= get_flash(@conn, :error) %>
+    </div>
+  </article>
+<% end %>
 
-  <div class="field">
-    <div class="control">
-      <label class="checkbox">
-        <input type="checkbox">
-        I agree to the <a href="#">terms and conditions</a>
-      </label>
+  <form method="POST">
+    <input type="hidden" name="_csrf_token" value="<%= @csrf_token %>">
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="someone@something.com" value="" name="email">
+        <span class="icon is-small is-left">
+          <i class="fa fa-envelope"></i>
+        </span>
+  <%#       <span class="icon is-small is-right">
+          <i class="fa fa-warning"></i>
+        </span> %>
+      </div>
+      <%# <p class="help is-danger">This email is invalid</p> %>
     </div>
-  </div>
 
-  <div class="field">
-    <div class="control">
-      <input type="submit" class="button is-success" value="Sign Up">
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input" type="password" placeholder="password" value="" name="password">
+        <span class="icon is-small is-left">
+          <i class="fa fa-lock"></i>
+        </span>
+  <%#       <span class="icon is-small is-right">
+          <i class="fa fa-warning"></i>
+        </span> %>
+      </div>
+      <%# <p class="help is-danger">This email is invalid</p> %>
     </div>
-  </div>
 
-  <div class="field">
-    <div class="control">
-      Already has an account? <a href="/pinch/sign_in">Sign in</a>
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input" type="password" placeholder="retype password" value="" name="password_confirmation">
+        <span class="icon is-small is-left">
+          <i class="fa fa-lock"></i>
+        </span>
+  <%#       <span class="icon is-small is-right">
+          <i class="fa fa-warning"></i>
+        </span> %>
+      </div>
+      <%# <p class="help is-danger">This email is invalid</p> %>
     </div>
-  </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="checkbox">
+          <input type="checkbox" id="terms_cond">
+          I agree to the <a href="#">terms and conditions</a>
+        </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <input type="submit" class="button is-success" value="Sign Up" id="sign-me-up" disabled="disabled">
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        Already has an account? <a href="/pinch/sign_in">Sign in</a>
+      </div>
+    </div>
+  </form>
 </div>

@@ -1,5 +1,6 @@
 <div class="form-it">
   <form method="POST">
+    <input type="hidden" name="_csrf_token" value="<%= @csrf_token %>">
     <div class="field">
       <p class="control has-icons-left has-icons-right">
         <input class="input" type="email" placeholder="Email">

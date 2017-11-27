@@ -16,14 +16,26 @@
   <body>
     <div class="container">
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
 
     </div> <!-- /container -->
+    <script src="<%= static_path(@conn, "/js/jquery.min.js") %>"></script>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        $('input[id=terms_cond]').on("click", function() {
+          if ($('input[id=terms_cond]:checked').length > 0) {
+            console.log("checked");
+            $("#sign-me-up").prop("disabled", false);
+          } else
+          {
+            $("#sign-me-up").prop("disabled", true);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
