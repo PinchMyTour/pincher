@@ -1,4 +1,17 @@
 <div class="form-it">
+
+  <%= if get_flash(@conn, :warning) do %>
+    <article class="message is-warning">
+      <div class="message-header">
+        <p>Danger</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body">
+        <%= get_flash(@conn, :warning) %>
+      </div>
+    </article>
+  <% end %>
+
   <form method="POST">
     <input type="hidden" name="_csrf_token" value="<%= @csrf_token %>">
     <div class="field">

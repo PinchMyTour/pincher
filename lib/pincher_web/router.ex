@@ -22,6 +22,7 @@ defmodule PinchWeb.Router do
     get "/pinch/sign_up", IndexController, :sign_up
     get "/pinch/sign_in", IndexController, :sign_in
 
+    get "/pinch/delete", UserController, :delete
     post "/pinch/sign_up", UserController, :create
     post "/pinch/sign_in", UserController, :sign_in
   end

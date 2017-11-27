@@ -8,6 +8,11 @@ defmodule Pinch.Collection do
 
   alias Pinch.Collection.User
 
+  def current_user(conn) do
+    id = Plug.Conn.get_session(conn, :current_user)
+    if id, do: get_user!(id)
+  end
+
   @doc """
   Returns the list of users.
 

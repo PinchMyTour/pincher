@@ -7,3 +7,21 @@
   width: 50%;
 }
 
+.post-item {
+  font-size: 20px;
+  color: white;
+}
+
+.navbar-item > .icon {
+  color: white;
+}
+
+/*nav.navbar {
+  border-top: 4px solid #276cda;
+  margin-bottom: 1rem;
+}
+
+.navbar-item.brand-text {
+  font-weight: 300;
+}
+*/
