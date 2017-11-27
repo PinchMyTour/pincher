@@ -17,6 +17,7 @@ defmodule PinchWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/pinch/dashboard", IndexController, :dashboard
 
     get "/pinch/sign_up", IndexController, :sign_up
     get "/pinch/sign_in", IndexController, :sign_in

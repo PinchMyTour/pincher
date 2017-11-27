@@ -8,4 +8,8 @@ defmodule PinchWeb.IndexController do
   def sign_in(conn, _params) do
     render conn, "sign_in.html", csrf_token: get_csrf_token()
   end
+
+  def dashboard(conn, _params) do
+    render conn, "dashboard.html"
+  end
 end
