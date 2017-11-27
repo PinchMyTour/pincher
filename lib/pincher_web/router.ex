@@ -16,9 +16,10 @@ defmodule PinchWeb.Router do
   scope "/", PinchWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", IndexController, :sign_in
+    get "/", PageController, :index
 
     get "/pinch/sign_up", IndexController, :sign_up
+    get "/pinch/sign_in", IndexController, :sign_in
   end
 
   # Other scopes may use custom stacks.
