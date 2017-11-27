@@ -23,9 +23,7 @@ defmodule PinchWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  scope "/api", PinchWeb do
-    pipe_through :api
-
-    get "/sign_up", UserOpsController, :sign_up
-  end
+  # scope "/api", PinchWeb do
+  #   pipe_through :api
+  # end
 end
