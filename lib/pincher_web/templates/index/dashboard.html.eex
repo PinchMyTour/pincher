@@ -1,43 +1,18 @@
-<div class="form-it">
-  <div class="hero-head">
-    <nav class="navbar is-link" role="navigation" aria-label="dropdown navigation">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-item post-item">
+<div class="pinch-dashboard-container">
+  <div id="crouton">
+    <ul>
+      <li>
+        <a href="#">
           <span class="icon">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
           </span>
         </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Overview
-          </a>
-          <a class="navbar-item">
-            Elements
-          </a>
-          <a class="navbar-item">
-            Components
-          </a>
-          <hr class="navbar-divider">
-          <div class="navbar-item">
-            Version 0.6.1
-          </div>
-        </div>
-      </div>
-    </nav>
-<%#     <nav class="navbar is-link">
-      <div class="navbar-brand">
-        <a class="navbar-item post-item" href="">
-          <span class="icon">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-          </span>
-        </a>
-        <span class="navbar-burger burger" data-target="navbarMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </div>
-    </nav> %>
+      </li>
+      <li><a href="#">Pinches</a></li>
+      <li><a href="#">Pinchers</a></li>
+      <li><a href="#">Yesterday</a></li>
+      <li><a href="#">Shared Paths</a></li>
+      <li><a href="/pinch/delete">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+    </ul>
   </div>
 </div>
