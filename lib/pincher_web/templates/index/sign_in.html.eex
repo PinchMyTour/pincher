@@ -1,9 +1,13 @@
 <div class="form-it">
 
+  <span class="icon">
+    <i class="fa fa-map-marker" aria-hidden="true"></i>
+  </span>
+
   <%= if get_flash(@conn, :warning) do %>
     <article class="message is-warning">
       <div class="message-header">
-        <p>Danger</p>
+        <p>Warning</p>
         <button class="delete" aria-label="delete"></button>
       </div>
       <div class="message-body">
@@ -12,11 +16,23 @@
     </article>
   <% end %>
 
+  <%= if get_flash(@conn, :info) do %>
+    <article class="message is-info">
+      <div class="message-header">
+        <p>Info</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body">
+        <%= get_flash(@conn, :info) %>
+      </div>
+    </article>
+  <% end %>
+
   <form method="POST">
     <input type="hidden" name="_csrf_token" value="<%= @csrf_token %>">
     <div class="field">
       <p class="control has-icons-left has-icons-right">
-        <input class="input" type="email" placeholder="Email">
+        <input class="input" type="email" placeholder="Email" name="email">
         <span class="icon is-small is-left">
           <i class="fa fa-envelope"></i>
         </span>
@@ -27,7 +43,7 @@
     </div>
     <div class="field">
       <p class="control has-icons-left">
-        <input class="input" type="password" placeholder="super secret">
+        <input class="input" type="password" placeholder="super secret" name="password">
         <span class="icon is-small is-left">
           <i class="fa fa-lock"></i>
         </span>

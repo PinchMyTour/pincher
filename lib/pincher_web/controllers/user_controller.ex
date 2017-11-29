@@ -2,6 +2,7 @@ defmodule PinchWeb.UserController do
   use PinchWeb, :controller
   alias Pinch.Collection
   alias Pinch.Util
+  alias Pinch.Repo
 
   require Logger
 
@@ -19,6 +20,20 @@ defmodule PinchWeb.UserController do
         conn
         |> put_flash(:error, traverse_errors |> List.first)
         |> redirect(to: "/pinch/sign_up")
+    end
+  end
+
+  def sign_in(conn, params) do
+    case Collection.login(params, Repo) do
+      {:ok, user} ->
+        conn
+        |> put_session(:current_user, user.id)
+        |> put_flash(:info, "You have logged in.")
+        |> redirect(to: "/pinch/dashboard")
+      :error ->
+        conn
+        |> put_flash(:warning, "Wrong email or password.")
+        |> redirect(to: "/pinch/sign_in")
     end
   end
 
