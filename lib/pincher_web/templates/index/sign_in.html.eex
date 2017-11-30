@@ -1,9 +1,5 @@
 <div class="form-it">
 
-  <span class="icon">
-    <i class="fa fa-map-marker" aria-hidden="true"></i>
-  </span>
-
   <%= if get_flash(@conn, :warning) do %>
     <article class="message is-warning">
       <div class="message-header">
