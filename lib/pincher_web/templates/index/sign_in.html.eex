@@ -30,7 +30,7 @@
         <p class="subtitle has-text-grey">Please login to proceed.</p>
         <div class="box">
           <figure class="avatar">
-            <img src="https://placehold.it/128x128">
+            <img src="../images/image.png" class="image-logical">
           </figure>
           <form method="POST">
             <input type="hidden" name="_csrf_token" value="<%= @csrf_token %>">

@@ -1,6 +1,12 @@
 .hero.is-success {
   background: #F2F6FA;
 }
+
+.image-logical {
+  width: 150px;
+  height: 140px;
+}
+
 .hero .nav, .hero.is-success .nav {
   -webkit-box-shadow: none;
   box-shadow: none;
