@@ -36,6 +36,7 @@
           }
         });
       });
+      window.startJSApp();
     </script>
   </body>
 </html>

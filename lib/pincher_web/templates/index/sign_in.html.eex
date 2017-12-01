@@ -1,8 +1,8 @@
   <%= if get_flash(@conn, :warning) do %>
-    <article class="message is-warning">
+    <article class="message is-warning bulma-sign-errors">
       <div class="message-header">
         <p>Warning</p>
-        <button class="delete" aria-label="delete"></button>
+        <button class="delete bulma-delete" aria-label="delete"></button>
       </div>
       <div class="message-body">
         <%= get_flash(@conn, :warning) %>
@@ -11,10 +11,10 @@
   <% end %>
 
   <%= if get_flash(@conn, :info) do %>
-    <article class="message is-info">
+    <article class="message is-info bulma-sign-errors">
       <div class="message-header">
         <p>Info</p>
-        <button class="delete" aria-label="delete"></button>
+        <button class="delete bulma-delete" aria-label="delete"></button>
       </div>
       <div class="message-body">
         <%= get_flash(@conn, :info) %>
