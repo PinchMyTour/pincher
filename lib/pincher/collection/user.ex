@@ -30,7 +30,7 @@ defmodule Pinch.Collection.User do
     user
     |> cast(attrs, [:email, :password])
     |> validate_required([:email, :password], [message: "Fields cannot be empty."])
-    |> unique_constraint(:email, [message: "Email has already been taken."])
+    |> unique_constraint(:email, [name: :user_email_unique_index, message: "Email has already been taken."])
     |> validate_confirmation(:password, [message: "Passwords do not match."])
     |> validate_length(:password, [min: 3, message: "Password should be at least 2 character(s)."])
     |> encrypt_password
