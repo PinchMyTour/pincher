@@ -1,34 +1,50 @@
-<div class="pinch-dashboard-container">
-
-  <%= if get_flash(@conn, :info) do %>
-    <article class="message is-info bulma-sign-errors">
-      <div class="message-header">
-        <p>Info</p>
-        <button class="delete bulma-delete" aria-label="delete"></button>
-      </div>
-      <div class="message-body">
-        <%= get_flash(@conn, :info) %>
-      </div>
-    </article>
-  <% end %>
-
-  <div id="crouton">
+<%= if get_flash(@conn, :info) do %>
+  <article class="message is-info bulma-sign-errors">
+    <div class="message-header">
+      <p>Info</p>
+      <button class="delete bulma-delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+      <%= get_flash(@conn, :info) %>
+    </div>
+  </article>
+<% end %>
+<div class="container is-fullhd">
+  <div class="tabs">
     <ul>
-      <li>
-        <a href="#">
-          <span class="icon">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-          </span>
+      <li class="is-active">
+        <a href="/pinch/dashboard">
+          <span class="icon is-small"><i class="fa fa-bars"></i></span>
+          <span>Dashboard</span>
         </a>
       </li>
-      <li><a href="#">Pinches</a></li>
-      <li><a href="#">Pinchers</a></li>
-      <li><a href="#">Yesterday</a></li>
       <li>
-        <a href="/pinch/delete">
-          Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
+        <a>
+          <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
+          <span>Pinches</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="icon is-small"><i class="fa fa-users"></i></span>
+          <span>Pinchers</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="icon is-small"><i class="fa fa-sign-out"></i></span>
+          <span>Logout</span>
         </a>
       </li>
     </ul>
   </div>
+</div>
+<div class="container is-fullhd">
+
+  <div class="centered">
+    <span class="icon ye-white-hai">
+      <i class="fa fa-location-arrow"></i>
+    </span>    
+  </div>
+ 
 </div>

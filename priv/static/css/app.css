@@ -2,6 +2,30 @@
   background: #F2F6FA;
 }
 
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  
+  font-size: 20px;
+  background: #3273DC;
+/*  background-color: cyan;
+  border: darkgreen 5px solid;*/
+  padding: 5px;
+  z-index: 100;
+}
+
+
+
+.ye-white-hai {
+  color: white;
+}
+
 .image-logical {
   width: 150px;
   height: 140px;
