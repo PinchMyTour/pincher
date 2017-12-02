@@ -10,17 +10,15 @@
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  
-  font-size: 20px;
+  -ms-transform: translate(-50%, -50%);  
+  font-size: 50px;
   background: #3273DC;
+  cursor: pointer;
 /*  background-color: cyan;
   border: darkgreen 5px solid;*/
-  padding: 5px;
+  padding: 35px;
   z-index: 100;
 }
-
-
 
 .ye-white-hai {
   color: white;
