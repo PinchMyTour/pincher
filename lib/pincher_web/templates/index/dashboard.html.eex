@@ -31,7 +31,7 @@
         </a>
       </li>
       <li>
-        <a>
+        <a href="/pinch/delete">
           <span class="icon is-small"><i class="fa fa-sign-out"></i></span>
           <span>Logout</span>
         </a>
