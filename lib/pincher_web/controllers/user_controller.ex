@@ -12,7 +12,7 @@ defmodule PinchWeb.UserController do
       conn
       |> put_flash(:info, "Your account has been created.")
       |> put_session(:current_user, user.id)
-      |> redirect(to: "/pinch/dashboard")
+      |> redirect(to: "/")
     else
       {:error, changeset} ->
         errors = Util.parse_changeset(changeset)
@@ -29,7 +29,7 @@ defmodule PinchWeb.UserController do
         conn
         |> put_session(:current_user, user.id)
         |> put_flash(:info, "You have logged in.")
-        |> redirect(to: "/pinch/dashboard")
+        |> redirect(to: "/")
       :error ->
         conn
         |> put_flash(:warning, "Wrong email or password.")

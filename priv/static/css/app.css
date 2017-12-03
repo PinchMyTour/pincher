@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Miniver|Open+Sans:300,300i,400,400i,600,600i');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Miniver', cursive;*/
+}
+
 .hero.is-success {
   background: #F2F6FA;
 }
@@ -18,6 +25,10 @@
   border: darkgreen 5px solid;*/
   padding: 35px;
   z-index: 100;
+}
+
+.give-top-margin {
+  margin-top: 10px;
 }
 
 .ye-white-hai {

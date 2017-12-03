@@ -24,7 +24,12 @@ var getCurrentLatLong = function () {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+var alertTriggers = function () {
+  $(".alert").alert();
+};
+
 window.startJSApp = function() {
   closeBulmaAlerts();
+  // alertTriggers();
   pinchMeClicked();
 };
