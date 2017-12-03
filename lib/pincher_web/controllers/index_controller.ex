@@ -5,8 +5,8 @@ defmodule PinchWeb.IndexController do
   def sign_up(conn, _params) do
     with %Collection.User{} <- Collection.current_user(conn) do
       conn
-      |> put_flash(:warning, "You already have been logged in :).")
-      |> redirect(to: "/pinch/dashboard")
+      |> put_flash(:info, "You already have been logged in :).")
+      |> redirect(to: "/")
     else
       _ ->
         render conn, "sign_up.html", csrf_token: get_csrf_token()
@@ -16,8 +16,8 @@ defmodule PinchWeb.IndexController do
   def sign_in(conn, _params) do
     with %Collection.User{} <- Collection.current_user(conn) do
       conn
-      |> put_flash(:warning, "You already have been logged in :).")
-      |> redirect(to: "/pinch/dashboard")
+      |> put_flash(:info, "You already have been logged in :)")
+      |> redirect(to: "/")
     else
       _ ->
         render conn, "sign_in.html", csrf_token: get_csrf_token()
